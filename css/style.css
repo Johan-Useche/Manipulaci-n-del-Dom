@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+#cont-general {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    background:#092e22f5;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#sideBar.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background: #002f4d;
+    transition: .5s;
+}
+
+#sideBar {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    transition: .5s;
+}
+
+#sideBarTop.active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    background:#011314;
+
+    transition: .5s;
+}
+
+.cotainerOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    font-size: 20px;
+   
+}
+
+.cotainerOptions a {
+    text-decoration: none;
+    color: #fffffff8;
+}
+
+#sideBarTop {
+    position: absolute;
+    top: -100%;
+    z-index: 1;
+    height: -100%;
+    transition: .5s;
+}
+
+.contentVideo {
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contentBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+} 
+
+.contentBtnTop {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contentBtn p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+.left,
+.right {
+    width: 44%;
+    border: 1px solid #57b5d1;
+    text-align: center;
+    padding: 30px;
+    min-height: 70vh;
+    background:#001b1d;
+    box-shadow: 0 4px 8px 0px #57b5d1;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#containerBtns {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+    gap: 10px;
+}
+
+.right {
+    position: relative;
+    height: 100vh;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    
+}
+
+.btnColor {
+    height: 50px;
+    box-shadow: 0 4px 8px 0px #57b5d1;
+    border-radius: 10px;
+    background-color: #001b1d;
+    width: 220px;
+    transition: .4s;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+button {
+    background: transparent;
+    box-shadow:  0 4px 8px 0px #57b5d1;
+    border-radius: 10px;
+    padding: 14px 30px;
+    color: #ffff;
+    width: 220px;
+    transition: .4s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+
+button:hover {
+    box-shadow:  0 4px 8px 0px #002e30;
+    color: #85d5ee;
+
+}
+
+
+#btnSideBarTopX,
+#btnSideBarX {
+    border: none;
+    font-size: 60px;
+    box-shadow: none;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+}
+
+#Figura {
+     width: 250px;
+     height: 250px;
+     background: #FFFFFF;
+     margin: 0 auto;
+
+}
+
+.circulo {
+    border-radius: 50%;
+}
+
+.rombo {
+    transform: rotate(45deg);
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.leftBtn {
+    position: absolute;
+    left: 0;
+}
+
+.bottomBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.btnRight {
+    position: absolute;
+    right: 0;
+}
+
+.diagonal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .5s;
+}
+
+.animation {
+    transform: rotate(90deg);
+    border-radius: 40%;
+    transition: .5s;
+}
+
+.gradient {
+    background: linear-gradient(0deg, rgb(109, 7, 73) 0%, rgb(0, 72, 78) 100%) !important;
+}
+
+.estrella {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+
+  @media screen and (max-width: 992px) {
+    #cont-general {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .right,
+    .left {
+        width: 100%;
+    }
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    button, 
+    .btnColor {
+        width: 100%;
+    }
+
+    #Figura {
+        width: 150px;
+        height: 150px;
+   }
+   #containerBtns {
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+
+.containerFigura {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+}
+
+    
+  }
